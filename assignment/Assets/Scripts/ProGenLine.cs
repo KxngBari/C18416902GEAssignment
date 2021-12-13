@@ -26,6 +26,8 @@ public class ProGenLine : MonoBehaviour
     void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
+
+        DrawCircle();
         //call on the draw circle function here
 
     }
@@ -46,6 +48,7 @@ public class ProGenLine : MonoBehaviour
             //apply a distance that is random
 
             //set the position on the line renderer
+            lineRenderer.SetPosition(i, new Vector3(lineXPosition, lineYPosition, 0));
 
         }
 
