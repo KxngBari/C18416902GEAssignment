@@ -45,10 +45,13 @@ public class ProGenLine : MonoBehaviour
             float lineYPosition = Mathf.Sin(angle) * radius;
 
             //calculate its offset
+            float offsetX = UnityEngine.Random.Range(lineXPosition, lineXPosition + (lineXPosition * randomOffset.x));
+            float offsetY = UnityEngine.Random.Range(lineYPosition, lineYPosition + (lineYPosition * randomOffset.y));
+
             //apply a distance that is random
 
             //set the position on the line renderer
-            lineRenderer.SetPosition(i, new Vector3(lineXPosition, lineYPosition, 0));
+            lineRenderer.SetPosition(i, new Vector3(lineXPosition + offsetX, lineYPosition + offsetY, 0));
 
         }
 
