@@ -53,6 +53,7 @@ public class ProGenLine : MonoBehaviour
         }
 
         //close the circle by calculating the last point's position
+        lineRenderer.SetPosition(numberOfPoints, new Vector3(lineRenderer.GetPosition(0).x, lineRenderer.GetPosition(0).y, 0));
     }
 
     // Update is called once per frame
