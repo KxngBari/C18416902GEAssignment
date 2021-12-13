@@ -21,6 +21,8 @@ public class ProGenLine : MonoBehaviour
     [Range(0.0f, 10.0f)]
     private float updateSeconds = 0.5f;
 
+    private float interalTimer = 0;
+
     private LineRenderer lineRenderer;
 
     void Start()
@@ -59,9 +61,16 @@ public class ProGenLine : MonoBehaviour
         lineRenderer.SetPosition(numberOfPoints, new Vector3(lineRenderer.GetPosition(0).x, lineRenderer.GetPosition(0).y, 0));
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if(interalTimer >= updateSeconds)
+        {
+            DrawCircle();
+            interalTimer = 0;
+        }
+        else
+        {
+            interalTimer = interalTimer + Time.deltaTime * 1.0f;
+        }
     }
 }

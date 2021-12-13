@@ -329,9 +329,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63292e68999ab074f85e3e355a72390a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
+  radius: 0.93
   randomOffset: {x: 0, y: 0}
-  numberOfPoints: 100
+  numberOfPoints: 8
   updateSeconds: 0.5
 --- !u!120 &1179634095
 LineRenderer:
