@@ -330,9 +330,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 0.93
-  randomOffset: {x: 0, y: 0}
-  numberOfPoints: 8
-  updateSeconds: 0.5
+  randomOffset: {x: 0.34, y: 0.84}
+  numberOfPoints: 6
+  updateSeconds: 0.03
 --- !u!120 &1179634095
 LineRenderer:
   m_ObjectHideFlags: 0

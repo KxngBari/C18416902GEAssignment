@@ -14,6 +14,14 @@ public class ProGenLine : MonoBehaviour
     private Vector2 randomOffset = Vector2.zero;
 
     [SerializeField]
+    [Range(0.05f, 10.0f)]
+    private float lineStartWidth = 0.05f;
+
+    [SerializeField]
+    [Range(0.05f, 10.0f)]
+    private float lineEndWidth = 0.05f;
+
+    [SerializeField]
     [Range(1,1000)]
     private int numberOfPoints = 100;
 
@@ -37,6 +45,8 @@ public class ProGenLine : MonoBehaviour
     void DrawCircle()
     {
         lineRenderer.positionCount = numberOfPoints + 1;
+        lineRenderer.startWidth = lineStartWidth;
+        lineRenderer.endWidth = lineEndWidth;
 
         for(int i = 0; i < numberOfPoints; i++)
         {
